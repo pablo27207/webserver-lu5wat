@@ -1,12 +1,15 @@
 services:
   app:
     build: .
-    container_name: flask_app
+    container_name: flask_app_lu5wat
     restart: unless-stopped
+    volumes:
+      - ./app/static:/app/static
+      - ./app/templates:/app/templates
 
   nginx:
     image: nginx:alpine
-    container_name: nginx_proxy
+    container_name: nginx_proxy_lu5wat
     ports:
       - "80:80"
     volumes:

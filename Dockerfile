@@ -9,10 +9,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy app
 COPY app app
-COPY wsgi.py .
 
 # Expose Gunicorn port
 EXPOSE 8000
 
 # Start the app with Gunicorn
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "wsgi:app"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "app.wsgi:app"]

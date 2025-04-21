@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lu5wat - Señales del Alma</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>LU5WAT</h1>
+      <p>Sintetizando señales del alma</p>
+    </header>
+
+    <section class="module" id="radio">
+      <h2>Radioafición</h2>
+      <canvas id="radio-wave"></canvas>
+    </section>
+
+    <section class="module" id="piano">
+      <h2>Piano</h2>
+      <div class="piano">
+        <!-- teclas animadas -->
+        <div class="key"></div><div class="key"></div><div class="key"></div>
+        <div class="key"></div><div class="key"></div><div class="key"></div>
+      </div>
+    </section>
+
+    <section class="module" id="tarot">
+      <h2>Tarot</h2>
+      <div class="cards">
+        <div class="card">🃏</div>
+        <div class="card">🃏</div>
+        <div class="card">🃏</div>
+      </div>
+    </section>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
